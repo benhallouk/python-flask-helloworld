@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact us{% endblock %}
+
+{% block content %}
+<p>Contact us</p>
+<form action="" method="post">
+    {{form.hidden_tag()}}    
+    {% if form.name.errors %}
+    <span style="color:red;">Please fill in your name</span>
+    {% endif %}
+    Name: {{form.name(size = 50)}}
+    <br>
+    {% if form.email.errors %}
+    <span style="color:red;">Please fill in your email, email must be valid</span>
+    {% endif %}
+    Email: {{form.email(size = 50)}}
+    <br>
+    {% if form.message.errors %}
+    <span style="color:red;">Please fill in your message</span>
+    {% endif %}
+    Message: {{form.message(size = 150)}}
+    <br>
+    <button type="submit">Sent</button>
+</form>
+{% endblock  %}

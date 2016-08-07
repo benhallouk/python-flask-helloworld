@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "macros/alert.html" import render_alert %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {{ render_alert(message) }}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<p>This is the home page</p>
+{% endblock %}
