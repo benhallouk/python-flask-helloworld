@@ -67,8 +67,10 @@ This project is using number of packages in order to run the project you will ha
 
 To do that run this command
 ```
-pip install <package-name>
+pip install -r requirements.txt
 ```
+
+
 
 ## Run the project
 
